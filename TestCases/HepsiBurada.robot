@@ -10,7 +10,7 @@ ${username}    Oktay Uyar
 
 
 *** Test Cases ***
-Valid Login
+Hepsiburada.com sitesine giriş yapıp ürün satın alma
     Given Hepsiburada.com sitesi açılır
     And Hepsiburada.com sitesinin açıldığı kontrol edilir
     When Hepsiburada.com sitesine giriş sayfasına gidilir
