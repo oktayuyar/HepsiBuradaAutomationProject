@@ -1,6 +1,7 @@
 *** Settings ***
 Resource          ../Resources/LoginPageKeywords.robot
 Resource          ../Resources/HomePageKeywords.robot
+Resource          ../Resources/MyBasketPageKeywords.robot
 
 
 *** Variables ***
@@ -22,3 +23,5 @@ Hepsiburada.com sitesine giriş yapıp ürün satın alma
     And Hepsiburada.com sitesinde ana sayfadan bir ürün seçilir
     And Hepsiburada.com sitesinde seçilen ürün sepete eklenir
     And Hepsiburada.com sitesinde sepetim butonuna tıklanır
+    And Hepsiburada.com sitesinde alışverişi tamamla butonuna tıklanır
+    And Hepsiburada.com sitesinde devam et butonuna tıklanır

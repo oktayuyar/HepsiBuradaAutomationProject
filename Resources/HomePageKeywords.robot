@@ -25,7 +25,7 @@ Hepsiburada.com sitesine giriş yapıldığı kontrol edilir
 
 
 Hepsiburada.com sitesinde ana sayfadan bir ürün seçilir
-    Go To    ${urlProductPage}
+    Click Element  ${btnProduct}
 
 
 Hepsiburada.com sitesinde seçilen ürün sepete eklenir
@@ -33,5 +33,6 @@ Hepsiburada.com sitesinde seçilen ürün sepete eklenir
 
 
 Hepsiburada.com sitesinde sepetim butonuna tıklanır
+    Sleep    5s
     Wait Until Element Is Visible    ${btnMyBasket}
     Click Link   ${btnMyBasket}
