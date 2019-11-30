@@ -13,3 +13,7 @@ Hepsiburada.com sitesi açılır
     Maximize Browser Window
     Set Selenium Speed    ${DELAY}
     Set Browser Implicit Wait   20
+
+
+Test sonlandırılır
+    [Teardown]    Close Browser
