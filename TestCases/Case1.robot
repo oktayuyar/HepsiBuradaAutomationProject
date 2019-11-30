@@ -8,6 +8,7 @@ Resource          ../Resources/MyBasketPageKeywords.robot
 ${email}    hepsiburadatestotomasyon@gmail.com
 ${password}    123456.*
 ${username}    Oktay Uyar
+${productName}    bluetooth kulaklık
 
 
 *** Test Cases ***
