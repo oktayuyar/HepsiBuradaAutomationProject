@@ -1,7 +1,5 @@
 *** Settings ***
-Resource          ../Resources/LoginPageKeywords.robot
 Resource          ../Resources/HomePageKeywords.robot
-Resource          ../Resources/MyBasketPageKeywords.robot
 Resource          ../Resources/ProductSearchPageKeywords.robot
 
 *** Variables ***
