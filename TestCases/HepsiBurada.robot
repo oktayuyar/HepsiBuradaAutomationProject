@@ -19,3 +19,6 @@ Hepsiburada.com sitesine giriş yapıp ürün satın alma
     And Hepsiburada.com sitesine giriş yapmak için parola yazılır    ${password}
     And Hepsiburada.com sitesine giriş yapmak için giriş yap butonuna tıklanır
     And Hepsiburada.com sitesine giriş yapıldığı kontrol edilir    ${username}
+    And Hepsiburada.com sitesinde ana sayfadan bir ürün seçilir
+    And Hepsiburada.com sitesinde seçilen ürün sepete eklenir
+    And Hepsiburada.com sitesinde sepetim butonuna tıklanır
