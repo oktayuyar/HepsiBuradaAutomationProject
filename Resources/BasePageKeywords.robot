@@ -16,4 +16,4 @@ Hepsiburada.com sitesi açılır
 
 
 Test sonlandırılır
-    [Teardown]    Close Browser
+    Close Browser

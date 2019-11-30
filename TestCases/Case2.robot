@@ -1,6 +1,9 @@
 *** Settings ***
 Resource          ../Resources/HomePageKeywords.robot
 Resource          ../Resources/ProductSearchPageKeywords.robot
+Test Setup  BasePageKeywords.Hepsiburada.com sitesi açılır
+Test Teardown  BasePageKeywords.Test sonlandırılır
+
 
 *** Variables ***
 ${productName}    bluetooth kulaklık
@@ -13,9 +16,8 @@ ${productColor}     Siyah
 
 *** Test Cases ***
 Hepsiburada.com sitesi ürün arama
-    Given Hepsiburada.com sitesi açılır
-    And Hepsiburada.com sitesinin açıldığı kontrol edilir
-    And Hepsiburada.com sitesinde arama alanına aranmak istenen ürün yazılır   ${productName}
+    Given Hepsiburada.com sitesinin açıldığı kontrol edilir
+    When Hepsiburada.com sitesinde arama alanına aranmak istenen ürün yazılır   ${productName}
     And Hepsiburada.com sitesinde ara butonuna tıklanır
     And Hepsiburada.com sitesinde kulaklık markası seçilir    ${productBrand}
     And Hepsiburada.com sitesinde kulaklık için fiyat aralığı seçilir    ${minPrice}    ${maxPrice}

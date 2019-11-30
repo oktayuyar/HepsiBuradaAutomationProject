@@ -2,6 +2,8 @@
 Resource          ../Resources/LoginPageKeywords.robot
 Resource          ../Resources/HomePageKeywords.robot
 Resource          ../Resources/MyBasketPageKeywords.robot
+Test Setup  BasePageKeywords.Hepsiburada.com sitesi açılır
+Test Teardown  BasePageKeywords.Test sonlandırılır
 
 
 *** Variables ***
@@ -12,8 +14,6 @@ ${username}    Oktay Uyar
 
 *** Test Cases ***
 Hepsiburada.com sitesine giriş yapıp ürün satın alma
-    Given Hepsiburada.com sitesi açılır
-    And Hepsiburada.com sitesinin açıldığı kontrol edilir
     When Hepsiburada.com sitesine giriş sayfasına gidilir
     And Hepsiburada.com sitesine giriş sayfasının açıldığı kontrol edilir
     And Hepsiburada.com sitesine giriş yapmak için email yazılır    ${email}
