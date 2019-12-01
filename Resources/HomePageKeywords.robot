@@ -25,7 +25,14 @@ Hepsiburada.com sitesine giriş yapıldığı kontrol edilir
 
 
 Hepsiburada.com sitesinde ana sayfadan bir ürün seçilir
+    ${response} =   Get Text      ${btnProduct}
+    ${selectedProductName}   Set Suite Variable     ${response}
     Click Element  ${btnProduct}
+
+
+Hepsiburada.com sitesinde seçilen ürünün detay sayfasının açıldığı kontrol edilir
+    ${response} =   Get Text      ${txtSearchedProductName}
+    Should Be Equal As Strings    ${response}    ${selectedProductName}
 
 
 Hepsiburada.com sitesinde seçilen ürün sepete eklenir
@@ -45,5 +52,3 @@ Hepsiburada.com sitesinde arama alanına aranmak istenen ürün yazılır
 
 Hepsiburada.com sitesinde ara butonuna tıklanır
     Click Button   ${btnSearch}
-
-

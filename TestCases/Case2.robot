@@ -13,7 +13,6 @@ ${maxPrice}     1000
 ${productColor}     Siyah
 
 
-
 *** Test Cases ***
 Hepsiburada.com sitesi ürün arama
     Given Hepsiburada.com sitesinin açıldığı kontrol edilir
@@ -24,5 +23,7 @@ Hepsiburada.com sitesi ürün arama
     And Hepsiburada.com sitesinde kulaklık için siyah renk seçilir
     And Hepsiburada.com sitesinde seçilen filtreler kontrol edilir    ${productBrand}    ${minPrice}   ${maxPrice}   ${productColor}
     And Hepsiburada.com sitesinde listelenen kulaklıklardan biri seçilir
+    Hepsiburada.com sitesinde seçilen kulaklığın filtrelere uyduğu kontrol edilir     ${productBrand}    ${productColor}
     And Hepsiburada.com sitesinde seçilen kulaklık için yapılan yorumlara tıklanır
     And Hepsiburada.com sitesinde kulaklık için yapılan yorumu faydalı buldum butonuna tıklanır
+    Then Hepsiburada.com sitesinde yorumu beğendikten sonra teşekkür ederiz yazısının çıktığı kontrol edilir

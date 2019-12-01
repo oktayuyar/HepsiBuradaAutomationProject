@@ -1,6 +1,7 @@
 *** Settings ***
 Library           Selenium2Library
 
+
 *** Variables ***
 ${BROWSER}        Chrome
 ${DELAY}          0

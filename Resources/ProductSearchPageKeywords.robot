@@ -3,6 +3,9 @@ Variables         ../PageObjects/ProductSearchPageLocators.py
 Resource          ../Resources/BasePageKeywords.robot
 
 
+*** Variables ***
+${messageThankYou}        Teşekkür Ederiz.
+
 
 *** Keywords ***
 Hepsiburada.com sitesinde kulaklık markası seçilir
@@ -40,8 +43,11 @@ Hepsiburada.com sitesinde listelenen kulaklıklardan biri seçilir
 Hepsiburada.com sitesinde seçilen kulaklığın filtrelere uyduğu kontrol edilir
     [Arguments]    ${productBrand}    ${productColor}
     ${response} =   Get Text      ${txtSearchedProductName}
-    ${productName} = Evaluate     "${response}".lower()
-    Should Be Contains    ${productName}    ${productColor}
+    ${productName}   Evaluate     "${response}".lower()
+    ${productBrand}     Evaluate    "${productBrand}".lower()
+    ${productColor}     Evaluate    "${productColor}".lower()
+    Should Contain    ${productName}    ${productBrand}
+    Should Contain    ${productName}    ${productColor}
 
 
 Hepsiburada.com sitesinde seçilen kulaklık için yapılan yorumlara tıklanır
@@ -50,3 +56,11 @@ Hepsiburada.com sitesinde seçilen kulaklık için yapılan yorumlara tıklanır
 
 Hepsiburada.com sitesinde kulaklık için yapılan yorumu faydalı buldum butonuna tıklanır
     Click Element   ${btnLikeProductReviews}
+
+
+Hepsiburada.com sitesinde yorumu beğendikten sonra teşekkür ederiz yazısının çıktığı kontrol edilir
+    Sleep    3s
+    Wait Until Element Is Enabled    ${txtThanksYou}
+    ${response} =   Get Text      ${txtThanksYou}
+    Should Be Equal As Strings    ${response}     ${messageThankYou}
+

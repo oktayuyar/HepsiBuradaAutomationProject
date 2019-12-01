@@ -6,6 +6,7 @@ Resource          ../Resources/BasePageKeywords.robot
 *** Variables ***
 ${loginPageTitle}     Üye Giriş Sayfası – Hepsiburada.com
 
+
 *** Keywords ***
 Hepsiburada.com sitesine giriş sayfasının açıldığı kontrol edilir
     Title Should Be    ${loginPageTitle}

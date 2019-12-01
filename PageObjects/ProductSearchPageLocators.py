@@ -11,6 +11,7 @@ txtProductColor = "css: li.box-container.renktipi > div > div > div > input"
 btnProductColor = "css: li.box-container.renktipi > ol > li[title='Siyah']"
 
 btnSearchedProduct = "css: div > div > ul > li.search-item"
-txtSearchedProductName = "id: product-name"
+txtSearchedProductName = "css: #product-name"
 btnProductReviews = "id: productReviewsTab"
 btnLikeProductReviews = "css: #reviews > li > div.reveiw-response > p.answer > a.yes"
+txtThanksYou = "css: #reviews > li > span.review-agreed-message.hidden"

@@ -2,6 +2,7 @@
 Resource          ../Resources/LoginPageKeywords.robot
 Resource          ../Resources/HomePageKeywords.robot
 Resource          ../Resources/MyBasketPageKeywords.robot
+Resource          ../Resources/ProductSearchPageKeywords.robot
 Test Setup  BasePageKeywords.Hepsiburada.com sitesi açılır
 Test Teardown  BasePageKeywords.Test sonlandırılır
 
@@ -23,5 +24,8 @@ Hepsiburada.com sitesine giriş yapıp ürün satın alma
     And Hepsiburada.com sitesinde ana sayfadan bir ürün seçilir
     And Hepsiburada.com sitesinde seçilen ürün sepete eklenir
     And Hepsiburada.com sitesinde sepetim butonuna tıklanır
+    And Hepsiburada.com sitesinde sepetim sayfasının açıldığı kontrol edilir
     And Hepsiburada.com sitesinde alışverişi tamamla butonuna tıklanır
+    And Hepsiburada.com sitesinde teslimat adresi adımında olduğumuz kontrol edilir
     And Hepsiburada.com sitesinde devam et butonuna tıklanır
+    Then Hepsiburada.com sitesinde ödeme adımında olduğumuz kontrol edilir
